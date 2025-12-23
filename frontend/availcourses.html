@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Courses</title>
+
+    <script src="myscript.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f1f1f1;
+        }
+
+        .container {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 14px;
+            width: 80%;
+            max-width: 900px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #00c6ff;
+            letter-spacing: 1px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 14px;
+            text-align: center;
+        }
+
+        th {
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        td {
+            color: #ddd;
+            border-bottom: 1px solid #3a3a3a;
+        }
+
+        tr:hover td {
+            background-color: #333;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Available Courses</h2>
+
+        <table>
+            <tr>
+                <th>Course Id</th>
+                <th>Course Name</th>
+                <th>Trainer</th>
+                <th>Duration in weeks</th>
+            </tr>
+
+            <tbody id="coursetable"></tbody>
+        </table>
+    </div>
+
+    <script>
+        window.onload = function () {
+            showCourse();
+        };
+    </script>
+</body>
+</html>

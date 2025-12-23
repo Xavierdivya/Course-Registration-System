@@ -1,0 +1,13 @@
+# Maven
+/backend/target/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log
+
+# OS
+.DS_Store

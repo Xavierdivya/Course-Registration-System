@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register a Course</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            background-color: #1e1e1e;
+            padding: 40px;
+            border-radius: 14px;
+            width: 380px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #00c6ff;
+        }
+
+        label {
+            font-size: 14px;
+            color: #cfcfcf;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            background-color: #2b2b2b;
+            color: white;
+        }
+
+        input::placeholder {
+            color: #999;
+        }
+
+        select option {
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 198, 255, 0.5);
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Kickstart with an exciting course</h1>
+
+        <form action="http://localhost:8080/courses/register" method="post">
+            <label>Enter your name</label>
+            <input type="text" name="name" placeholder="Your Name">
+
+            <br><br>
+
+            <label>Enter your Email ID</label>
+            <input type="email" name="emailId" placeholder="example@gmail.com">
+
+            <br><br>
+
+            <label>Choose a Course</label>
+            <select name="coursename">
+                <option value="Java Essentials">Java Essentials</option>
+                <option value="Python for ML">Python for ML</option>
+                <option value="springboot">Spring Boot</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
